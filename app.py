@@ -3,7 +3,7 @@ from azure.storage.filedatalake import DataLakeServiceClient
 import datetime
 import os
 
-connstr = os.getenv("azurestroageconnectstring")
+connstr = os.getenv("AZSTR")
 container = "azc"
 app = Flask(__name__)
 
