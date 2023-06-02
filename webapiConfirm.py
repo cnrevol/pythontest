@@ -1,6 +1,5 @@
 from flask import Flask, request
-from azure.storage.blob import BlobServiceClient
-from azure.storage.filedatalake import DataLakeFileClient, DataLakeServiceClient
+from azure.storage.filedatalake import DataLakeServiceClient
 import datetime
 import os
 
