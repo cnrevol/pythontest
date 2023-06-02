@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request,render_template
 from azure.storage.filedatalake import DataLakeServiceClient
 import datetime
 import os
@@ -30,13 +30,17 @@ def update_blob():
     else:
         return "Invalid request"
 
-@app.route('/', methods=['GET'])
+@app.route('/hello', methods=['GET'])
 def hello():
     return 'Hello, World!'
 
-@app.route('/TG', methods=['GET'])
-def hello():
+@app.route('/tg', methods=['GET'])
+def hello3():
     return 'Here is a TEST!'
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80)
