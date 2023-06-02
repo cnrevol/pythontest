@@ -35,5 +35,9 @@ def update_blob():
 def hello():
     return 'Hello, World!'
 
+@app.route('/TG', methods=['GET'])
+def hello():
+    return 'Here is a TEST!'
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80)
