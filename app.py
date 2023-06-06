@@ -40,7 +40,7 @@ def updateblob():
     
     logging.info(f"POST method update_blob. with json data:{data}")
     
-    message = data.get("message")
+    message = data
     if message:
         current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         file_name = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
